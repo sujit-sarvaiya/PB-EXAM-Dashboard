@@ -1,0 +1,57 @@
+Power BI Student Performance Dashboard - Project Summary
+
+1.  Data Loading & Cleaning:
+
+-   Loaded 4 datasets: Students, Scores, Attendance, Behavior.
+-   Verified and corrected data types (StudentID as Whole Number, Date
+    as Date format).
+-   Cleaned column names and handled missing/null values where required.
+-   Ensured correct formatting for Score and MaxScore columns.
+
+2.  Data Modeling:
+
+-   Created relationships between: Students[StudentID] ->
+    Scores[StudentID] Students[StudentID] -> Attendance[StudentID]
+    Students[StudentID] -> Behavior[StudentID]
+-   Set relationship type as One-to-Many (1:*).
+-   Used Students table as the main dimension table.
+
+3.  DAX Measures Created:
+
+-   % Score = DIVIDE(SUM(Score), SUM(MaxScore))
+-   Average Score = AVERAGE(Score)
+-   Attendance % = Present Count / Total Attendance
+-   Behavior Count = COUNT(BehaviorType)
+-   Performance Category using SWITCH (High/Medium/Low)
+-   Total Students = DISTINCTCOUNT(StudentID)
+-   Avg Attendance KPI
+-   Avg % Score KPI
+
+4.  Visualizations Created:
+
+-   Card visuals: Total Students, Average Score, Avg Attendance
+-   Bar Chart: Average Score by Subject and Class
+-   Line Chart: % Score by Term (Performance Trend)
+-   Donut Chart: Behavior Count by Behavior Type
+-   Table: Student-wise Score with % Score
+
+5.  Conditional Formatting:
+
+-   Applied conditional formatting on % Score column: >= 80% -> Green
+    40%–79% -> Yellow < 40% -> Red
+
+6.  Interactivity Features:
+
+-   Added slicers for Class, Section, Subject, and Term.
+-   Enabled drillthrough for Student Profile page.
+-   Implemented clean layout and professional formatting.
+
+7.  Final Outcome:
+
+-   Created a fully interactive Student Performance Dashboard.
+-   Included KPIs, performance trends, attendance tracking, and behavior
+    analysis.
+-   Applied professional formatting and logical data modeling.
+
+Project completed successfully with proper data modeling, DAX
+calculations, visualization design, and interactivity implementation.
